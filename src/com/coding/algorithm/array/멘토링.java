@@ -57,37 +57,19 @@ public class 멘토링 {
 
     private static int solution(int m, int n, int[][] arr) {
         int answer = 0;
-        List<List<Integer>> list = new ArrayList<>();
-        for (int i = 0; i < n; i++) {
-            List<Integer> temp = new ArrayList<>();
-            for (int j = i; j < n; j++) {
-                temp.add(arr[0][j]);
-            }
-            list.add(temp);
-        } //첫번째 시험 등록
-
-        for (int i = 1; i < m; i++) {
-            for (int j = 0; j < n; j++) {
-                List<Integer> refresh = new ArrayList<>();
-                List<Integer> temp = new ArrayList<>();
-                for (int l = 0; l < n; l++) {
-                    if (list.get(l).get(0) == arr[i][j]) {
-                        temp = list.remove(l);
-                        refresh.add(temp.get(0));
-                        break;
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n; j++) {
+                int count = 0;
+                for (int k = 0; k < m; k++) {
+                    int pi = 0, pj = 0;
+                    for (int l = 0; l < n; l++) {
+                        if (arr[k][l] == i) pi = l;
+                        if (arr[k][l] == j) pj = l;
                     }
+                    if (pi > pj) count++;
                 }
-                for (int k = j + 1; k < n; k++) {
-                    if (temp.contains(arr[i][k])) {
-                        refresh.add(arr[i][k]);
-                    }
-                }
-                list.add(refresh);
+                if(count == m) answer++;
             }
-        }
-
-        for (int i = 0; i < list.size(); i++) {
-            answer += list.remove(i).size() - 1;
         }
         return answer;
     }
