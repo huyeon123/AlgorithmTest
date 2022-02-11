@@ -56,14 +56,9 @@ public class LRU_카카오 {
     private static List<Integer> solution(int s, int n, int[] arr) {
         List<Integer> cache = new ArrayList<>();
         for (int i = 0; i < n; i++) {
-            if(!cache.contains(arr[i])){
-                if(cache.size() == s) cache.remove(0);
-                cache.add(arr[i]);
-            }
-            else{
-                cache.remove((Object)arr[i]);
-                cache.add(arr[i]);
-            }
+            if(cache.contains(arr[i])) cache.remove((Object)arr[i]);
+            if(cache.size() == s) cache.remove(0);
+            cache.add(arr[i]);
         }
         return cache;
     }
