@@ -2,7 +2,7 @@ package com.coding.algorithm.dfs_bfs_basic;
 
 import java.util.*;
 
-public class 경로탐색 {
+public class 경로탐색_인접행렬 {
     /**
      *방향그래프가 주어지면 1번 정점에서 N번 정점으로 가는 모든 경로의 가지 수를 출력하는 프
      * 로그램을 작성하세요.
