@@ -1,7 +1,6 @@
-package com.coding.algorithm.programmers;
+package com.coding.algorithm.programmers.greedy;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class 체육복 {
     /**
