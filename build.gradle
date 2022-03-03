@@ -10,8 +10,9 @@ repositories {
 }
 
 dependencies {
-    // https://mvnrepository.com/artifact/junit/junit
-    testImplementation 'junit:junit:4.13.1'
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-test
+    testImplementation 'org.springframework.boot:spring-boot-starter-test:2.6.3'
+
 }
 
 test {
