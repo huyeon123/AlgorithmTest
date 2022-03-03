@@ -1,3 +1,8 @@
 .idea/
 algorithm.iml
 out/
+.gradle/
+gradle/
+gradlew
+gradlew.bat
+/build
