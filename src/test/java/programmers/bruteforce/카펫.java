@@ -1,4 +1,4 @@
-package com.coding.algorithm.programmers.bruteforce;
+package programmers.bruteforce;
 
 
 public class 카펫 {

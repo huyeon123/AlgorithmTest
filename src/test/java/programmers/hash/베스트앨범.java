@@ -1,4 +1,4 @@
-package com.coding.algorithm.programmers.hash;
+package programmers.hash;
 
 
 import java.util.*;

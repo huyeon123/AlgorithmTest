@@ -1,4 +1,4 @@
-package com.coding.algorithm.programmers.stackandqueue;
+package programmers.stackandqueue;
 
 import java.util.Stack;
 

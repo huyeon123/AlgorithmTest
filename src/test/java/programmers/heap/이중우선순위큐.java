@@ -1,4 +1,4 @@
-package com.coding.algorithm.programmers.heap;
+package programmers.heap;
 
 import java.util.*;
 
