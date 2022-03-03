@@ -1,17 +1,19 @@
 package programmers.greedy;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.stream.Stream;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 
 public class 큰수만들기 {
     /**
      *
      */
-    public static void main(String[] args) {
-        String number = "4177252841";
-        int k = 4;
-        System.out.print(solution(number, k));
+
+    @DisplayName("테스트 케이스")
+    @Test
+    public void testCase() {
+        Assertions.assertEquals("775841", solution("4177252841", 4));
+        Assertions.assertEquals("3234", solution("1231234", 3));
     }
 
     private static String solution(String number, int k) {
