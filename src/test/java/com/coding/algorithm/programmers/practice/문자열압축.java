@@ -18,29 +18,22 @@ public class 문자열압축 {
         int answer = Integer.MAX_VALUE;
         for (int i = 1; i <= s.length(); i++) {
             StringBuilder sb = new StringBuilder();
-            String temp = "";
-            int count = 0;
-            for (int j = 0; j < s.length(); j += i) {
+            String temp = s.substring(0, i);
+            int count = 1;
+            for (int j = i; j < s.length(); j += i) {
                 String substring;
-                if(j + i <= s.length()) substring = s.substring(j, j + i);
+                if (j + i <= s.length()) substring = s.substring(j, j + i);
                 else substring = s.substring(j);
-                if (count == 0) {
+
+                if (temp.equals(substring)) count++;
+                else {
+                    if (count > 1) sb.append(count);
+                    sb.append(temp);
                     temp = substring;
                     count = 1;
-                } else {
-                    if (temp.equals(substring)) {
-                        count++;
-                    } else {
-                        if(count > 1) sb.append(count);
-                        sb.append(temp);
-                        temp = substring;
-                        count = 1;
-                    }
                 }
             }
-            if(count > 1){
-                sb.append(count);
-            }
+            if (count > 1) sb.append(count);
             sb.append(temp);
             answer = Math.min(answer, sb.toString().length());
         }
