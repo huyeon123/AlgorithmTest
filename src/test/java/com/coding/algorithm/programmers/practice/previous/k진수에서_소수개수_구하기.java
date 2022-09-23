@@ -1,4 +1,4 @@
-package com.coding.algorithm.programmers.practice;
+package com.coding.algorithm.programmers.practice.previous;
 
 import java.util.*;
 

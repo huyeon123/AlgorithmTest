@@ -1,4 +1,4 @@
-package com.coding.algorithm.programmers.practice;
+package com.coding.algorithm.programmers.practice.previous;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
